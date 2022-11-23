@@ -1,0 +1,111 @@
+1)class Student{   
+ int id; 
+ String name;    
+ public static void main(String args[]){   
+  Student s1=new Student():
+  System.out.println(s1.id);  
+  System.out.println(s1.name);  
+ }  
+}  
+
+2)class Student{  
+ int id;  
+ String name;  
+}  
+class TestStudent2{  
+ public static void main(String args[]){  
+  Student s1=new Student();  
+  s1.id=101;  
+  s1.name="Sonoo";  
+  System.out.println(s1.id+" "+s1.name);
+ }  
+}  
+
+3)class OverloadingCalculation3{  
+  void sum(int a,long b)
+  {
+  System.out.println("a method invoked");
+  }  
+  void sum(long a,int b)
+  {
+  System.out.println("b method invoked");
+  }  
+  
+  public static void main(String args[]){  
+  OverloadingCalculation3 obj=new OverloadingCalculation3();  
+  obj.sum(20,20);  
+  }  
+}  
+
+4)class Bank{  
+int getRateOfInterest()
+{
+return 0;
+}  
+}  
+class SBI extends Bank{  
+int getRateOfInterest(){
+return 8;
+}  
+}  
+  
+class ICICI extends Bank{  
+int getRateOfInterest()
+{
+return 7;
+}  
+}  
+class AXIS extends Bank{  
+int getRateOfInterest(){return 9;}  
+}   
+class Test2{  
+public static void main(String args[]){  
+SBI s=new SBI();  
+ICICI i=new ICICI();  
+AXIS a=new AXIS();  
+System.out.println("SBI Rate of Interest: "+s.getRateOfInterest());  
+System.out.println("ICICI Rate of Interest: "+i.getRateOfInterest());  
+System.out.println("AXIS Rate of Interest: "+a.getRateOfInterest());  
+}  
+}  
+
+5)abstract class Shape{  
+abstract void draw();  
+}  
+class Rectangle extends Shape{  
+void draw(){
+System.out.println("drawing rectangle");
+}  
+}  
+class Circle1 extends Shape{  
+void draw(){
+System.out.println("drawing circle");
+}  
+}   
+class TestAbstraction1{  
+public static void main(String args[]){  
+Shape s=new Circle1();
+
+s.draw();  
+}  
+} 
+
+
+6)interface Bank{  
+float rateOfInterest();  
+}  
+class SBI implements Bank{  
+public float rateOfInterest(){
+return 9.15f;
+}  
+}  
+class PNB implements Bank{  
+public float rateOfInterest(){
+return 9.7f;
+}  
+}  
+class TestInterface2{  
+public static void main(String[] args){  
+Bank b=new SBI();  
+System.out.println("ROI: "+b.rateOfInterest());  
+}}  
